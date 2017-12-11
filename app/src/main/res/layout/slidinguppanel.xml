@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/showartist"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="300dp"
+        android:id="@+id/albumart"
+        android:layout_marginTop="43dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/showartist"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skipback"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/showartist"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/play"
+        android:layout_alignBaseline="@+id/skipback"
+        android:layout_alignBottom="@+id/skipback"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skipnext"
+        android:layout_alignBaseline="@+id/play"
+        android:layout_alignBottom="@+id/play"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/seekbar"
+        android:layout_above="@+id/skipback"
+        android:layout_alignStart="@+id/albumart"
+        android:layout_marginBottom="21dp" />
+</RelativeLayout>

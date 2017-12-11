@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apppool.demomusicplayer_v2.MainActivity"
+>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="40dp"
+        sothree:umanoShadowHeight="4dp"
+
+        >
+
+
+        <!-- for main layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+          <TextView
+            android:id="@+id/size_song_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="7sp"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="15sp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                />
+
+        </LinearLayout>
+
+        <!-- for sliding up panel -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/showartist"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="300dp"
+                android:id="@+id/albumart"
+                android:layout_marginTop="43dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/showartist"
+                android:layout_centerHorizontal="true" />
+
+            <SeekBar
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/seekbar"
+                android:layout_alignBottom="@+id/albumart"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/play"
+                android:layout_below="@+id/seekbar"
+                android:layout_centerHorizontal="true"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/skipback"
+                android:layout_below="@+id/seekbar"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/skipnext"
+                android:layout_below="@+id/seekbar"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>
